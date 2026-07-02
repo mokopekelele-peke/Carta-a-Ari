@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Carta a Ari</title>
+
+ <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página con imagen de fondo</title>
+    <style>
+        body {
+            background-image: url('https://i.pinimg.com/vwebp/1200x/2e/ee/de/2eeeded18ccd410cb58cf04ca6a915be.webp');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            margin: 0;
+        }
+
+    </style>
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wiki Panel</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: #f6f6f6;
+            color: #202122;
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .wiki-panel {
+            background-color: #90BD66
+;
+            max-width: 800px;
+            width: 100%;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04);
+            border: 1px solid #e2e8f0;
+            box-sizing: border-box;
+        }
+
+        h1 {             font-family: 'Georgia', serif;
+            font-size: 2.2rem;
+            font-weight: normal;
+            border-bottom: 1px solid #a2a9b1;
+            padding-bottom: 5px;
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 16px;
+        }
+
+        a {
+            color: #36b;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: none;
+        }
+    </style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagen Giratoria</title>
+    <style>
+        body {
+            background-color: #f6f6f6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .rotar-imagen {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 50%;
+            /* Vincula la animación definida abajo */
+            animation: girar 5s linear infinite; 
+        }
+
+        /* Define el movimiento de 0 a 360 grados */
+        @keyframes girar {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reproductor MP3</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Roboto, sans-serif;
+            background-color: #121212;
+            color: #ffffff;
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .mp3-player {
+            background-color: #1e1e1e;
+            width: 100%;
+            max-width: 400px;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+            overflow: hidden;
+        }
+
+        .now-playing {
+            padding: 30px 20px;
+            text-align: center;
+            background: linear-gradient(180deg, #282828 0%, #1e1e1e 100%);
+            border-bottom: 1px solid #282828;
+        }
+
+        .cover-art {
+            width: 150px;
+            height: 150px;
+            background-color: #404040;
+            margin: 0 auto 20px auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+        }
+
+        .track-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin: 0 0 5px 0;
+        }
+
+        .track-artist {
+            font-size: 0.9rem;
+            color: #b3b3b3;
+            margin: 0 0 20px 0;
+        }
+
+        audio {
+            width: 100%;
+            outline: none;
+        }
+
+        /* Estilización nativa del audio para encajar en el modo oscuro */
+        audio::-webkit-media-controls-panel {
+            background-color: #282828;
+        }
+        audio::-webkit-media-controls-current-time-display,
+        audio::-webkit-media-controls-time-remaining-display {
+            color: #ffffff;
+        }
+
+        .playlist {
+            padding: 10px 0;
+            max-height: 250px;
+            overflow-y: auto;
+        }
+
+        .playlist-item {
+            display: flex;
+            align-items: center;
+            padding: 12px 20px;
+            border-left: 4px solid transparent;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .playlist-item:hover {
+            background-color: #2a2a2a;
+        }
+
+        .playlist-item.active {
+            background-color: #282828;
+            border-left-color: #1db954; /* Verde estilo Spotify */
+        }
+
+        .item-number {
+            width: 30px;
+            color: #b3b3b3;
+            font-size: 0.9rem;
+        }
+
+        .item-info {
+            flex-grow: 1;
+        }
+
+        .item-title {
+            font-size: 0.95rem;
+            margin: 0;
+        }
+
+        .item-artist {
+            font-size: 0.8rem;
+            color: #b3b3b3;
+            margin: 0;
+        }
+
+        .item-duration {
+            font-size: 0.85rem;
+            color: #b3b3b3;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="wiki-panel">
+        <h2>Holi Ari!</h2>
+
+<p>。·:*:·ﾟ★,。·:*:·ﾟ☆。·:*:·ﾟ★,。·:*:·ﾟ☆</p>
+
+        <p>No tengo idea de que estoy haciendo, la verdad, pero está divertido.</p>
+        <p>Por ahora estoy improvisando.</p>
+<ul> <p>Razones por las que soy la mejor:</p>
+<li>Te hice una pagina</li></ul>
+<p>Fin.</p>
+
+<img src="https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/025.png" alt="Imagen que gira" class="rotar-imagen">
+
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function playTrack(source, title, artist, element) {
+            const player = document.getElementById('audio-player');
+            const titleDisplay = document.getElementById('current-title');
+            const artistDisplay = document.getElementById('current-artist');
+            
+            // Cambiar fuente y textos (Reemplaza 'audio1.mp3', etc., por tus archivos reales)
+            player.src = source;
+            titleDisplay.textContent = title;
+            artistDisplay.textContent = artist;
+            
+            // Reproducir automáticamente al hacer clic
+            player.play();
+            
+            // Actualizar clase activa en el menú
+            document.querySelectorAll('.playlist-item').forEach(item => {
+                item.classList.remove('active');
+            });
+            element.classList.add('active');
+        }
+    </script>
+
+    </div>
+<div class="mp3-player">
+        <!-- Panel de reproducción actual -->
+        <div class="now-playing">
+            <div class="cover-art">🎵</div>
+            <h2 class="track-title" id="current-title">Selecciona una canción</h2>
+            <p class="track-artist" id="current-artist">Artista</p>
+            
+            <audio id="audio-player" controls src=""></audio>
+        </div>
+
+        <!-- Lista de reproducción / Menú -->
+        <div class="playlist">
+            <div class="playlist-item active" onclick="playTrack('Caramella Girls - Caramelldansen HD version (Swedish Original).mp3', this)">
+                <div class="item-number">1</div>
+                <div class="item-info">
+                    <p class="item-title">Caramel Dance</p>
+                    <p class="item-artist">No se de quien es jiji</p>
+                </div>
+                <div class="item-duration">2:55</div>
+            </div>
+
+            <div class="playlist-item" onclick="playTrack('Creepervszombie.mp3', this)">
+                <div class="item-number">2</div>
+                <div class="item-info">
+                    <p class="item-title">CREEPER VS ZOMBIE</p>
+                    <p class="item-artist">De los frikis españoles</p>
+                </div>
+                <div class="item-duration">3:34</div>
+            </div>
+
+</body>
+</html>
